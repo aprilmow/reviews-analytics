@@ -7,5 +7,9 @@ with open('reviews.txt', 'r') as f:
 		if count % 10 == 0: #every 10 review
 			print(len(data)) #show reading progress
 
-print(len(data))
-print(data[0])
+print('reading completed, total', len(data), 'data')
+
+sum_len = 0
+for d in data:
+	sum_len = sum_len + len(d)
+print('average is', sum_len / len(data))
